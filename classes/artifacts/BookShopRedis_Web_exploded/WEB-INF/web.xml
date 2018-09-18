@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>BookStore</display-name>
+  
+    <listener>
+	  <listener-class>com.icss.listener.BookLoadListener</listener-class>
+	</listener>  
+    
+  <filter>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <filter-class>com.icss.bk.filter.CharacterEncodingFilter</filter-class> 
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>GBK</param-value>
+        </init-param>      
+   </filter>   
+   <filter-mapping>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>  
+  
+   <filter>
+        <filter-name>AuthFilter</filter-name>
+        <filter-class>com.icss.bk.filter.AuthFilter</filter-class>       
+   </filter>   
+   <filter-mapping>
+        <filter-name>AuthFilter</filter-name>
+        <url-pattern>/back/*</url-pattern>
+    </filter-mapping>  
+  
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginSvl</servlet-name>
+    <servlet-class>com.icss.bk.controller.LoginSvl</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MainSvl</servlet-name>
+    <servlet-class>com.icss.bk.controller.MainSvl</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BookPicSvl</servlet-name>
+    <servlet-class>com.icss.bk.controller.BookPicSvl</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LogoutSvl</servlet-name>
+    <servlet-class>com.icss.bk.controller.LogoutSvl</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BookDetailSvl</servlet-name>
+    <servlet-class>com.icss.bk.controller.BookDetailSvl</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShopCarSvl</servlet-name>
+    <servlet-class>com.icss.bk.controller.ShopCarSvl</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShopCarAddSvl</servlet-name>
+    <servlet-class>com.icss.bk.controller.ShopCarAddSvl</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CheckoutSvl</servlet-name>
+    <servlet-class>com.icss.bk.controller.CheckoutSvl</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PayMoneySvl</servlet-name>
+    <servlet-class>com.icss.bk.controller.PayMoneySvl</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BookAddSvl</servlet-name>
+    <servlet-class>com.icss.bk.controller.back.BookAddSvl</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BuyRecordSvl</servlet-name>
+    <servlet-class>com.icss.bk.controller.back.BuyRecordSvl</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RegisterSvl</servlet-name>
+    <servlet-class>com.icss.bk.controller.RegisterSvl</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MainSvl2</servlet-name>
+    <servlet-class>com.icss.bk.controller.MainSvl2</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BookPageViewSvl</servlet-name>
+    <servlet-class>com.icss.bk.controller.back.BookPageViewSvl</servlet-class>
+  </servlet>
+ 
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BookCommentSvl</servlet-name>
+    <servlet-class>com.icss.bk.controller.BookCommentSvl</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PlzanSvl</servlet-name>
+    <servlet-class>com.icss.bk.controller.PlzanSvl</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>LoginSvl</servlet-name>
+    <url-pattern>/LoginSvl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MainSvl</servlet-name>
+    <url-pattern>/MainSvl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BookPicSvl</servlet-name>
+    <url-pattern>/BookPicSvl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LogoutSvl</servlet-name>
+    <url-pattern>/LogoutSvl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BookDetailSvl</servlet-name>
+    <url-pattern>/BookDetailSvl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShopCarSvl</servlet-name>
+    <url-pattern>/ShopCarSvl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShopCarAddSvl</servlet-name>
+    <url-pattern>/ShopCarAddSvl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckoutSvl</servlet-name>
+    <url-pattern>/CheckoutSvl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PayMoneySvl</servlet-name>
+    <url-pattern>/PayMoneySvl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BookAddSvl</servlet-name>
+    <url-pattern>/back/BookAddSvl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BuyRecordSvl</servlet-name>
+    <url-pattern>/back/BuyRecordSvl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterSvl</servlet-name>
+    <url-pattern>/RegisterSvl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MainSvl2</servlet-name>
+    <url-pattern>/MainSvl2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BookPageViewSvl</servlet-name>
+    <url-pattern>/back/BookPageViewSvl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BookCommentSvl</servlet-name>
+    <url-pattern>/BookCommentSvl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PlzanSvl</servlet-name>
+    <url-pattern>/PlzanSvl</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>   
+  </welcome-file-list>
+</web-app>
